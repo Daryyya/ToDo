@@ -1,0 +1,115 @@
+@import './reset.css';
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    max-width: 660px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 70px;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 33px;
+    padding-top: 80px;
+}
+
+.wrapper {
+    background: #FFFFFF;
+    box-shadow: 0px 8px 35px rgba(0, 0, 0, 0.16);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wrapper-for-text-input {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    background-color:#F5F5F5;
+}
+
+.wrapCheckBoxList {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapCheckBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapBtn {
+    background-color:#F5F5F5;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+.text {
+    background: #FFFFFF;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #54595E;
+    min-width: 350px;
+}
+
+.btn {
+    background:  #272829;
+    border-radius: 4px;
+    padding: 10px 60px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+label {
+    padding-bottom: 26px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #54595E;
+}
+
+.checkBox {
+    display: none;
+}
+
+.btnDelChecked {
+    background: #6C757D;
+    border-radius: 4px;
+    padding: 10px 16px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.btnDelAll {
+    background: #DC3545;
+    border-radius: 4px;
+    padding: 10px 16px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+
