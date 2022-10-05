@@ -78,6 +78,7 @@
 }
 
 label {
+    position: relative;
     padding-bottom: 26px;
     font-weight: 400;
     font-size: 16px;
@@ -86,7 +87,64 @@ label {
 }
 
 .checkBox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    margin-right: ;
+  }
+
+  .checkBox ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  .checkBox:checked ~ .checkmark {
+    background-color: #23f438;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
     display: none;
+  }
+
+  .checkBox:checked ~ .checkmark:after {
+    display: block;
+  }
+
+ .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+label::before {
+    content: '';
+    text-align: center;
+  color: white;
+  line-height: 1em;
+  width: 1em;
+  height: 1em;
+  border: 2px inset #000;
+  border-radius: 0.25em;
+  margin: 0.25em;
+  display: inline-block;
 }
 
 .btnDelChecked {

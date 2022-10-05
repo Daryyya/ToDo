@@ -37,15 +37,18 @@ function createCheckBox (value) {
         $checkBox.id = `${$id}`;
         $checkBox.className = 'checkBox';
 
+    let span = document.createElement('span');
+    span.className = 'checkmark';
+
     let $label = document.createElement('label');
         $label.for = `${$id}`;
         $label.textContent = `${value}`;
-        $label.prepend($checkBox);
+        $label.prepend($checkBox, span);
 
         $label.addEventListener('click', addCheckedValue);
         function addCheckedValue () {
             $label.style.textDecoration = 'line-through';
-            $label.style.opacity = '0.5';
+            // $label.style.opacity = '0.5';
         }
 
     let $delCheckBox = document.createElement('div');
