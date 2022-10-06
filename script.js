@@ -30,25 +30,34 @@ $wrapBtn.prepend($btnDelChecked, $btnDelAll);
 
 let $id = '';
 
-function createCheckBox (value) {
-
-    let $checkBox = document.createElement('input');
-        $checkBox.type = 'checkbox';
-        $checkBox.id = `${$id}`;
-        $checkBox.className = 'checkBox';
-
-    let span = document.createElement('span');
-    span.className = 'checkmark';
+function createCheckBox ($value) {
 
     let $label = document.createElement('label');
-        $label.for = `${$id}`;
-        $label.textContent = `${value}`;
-        $label.prepend($checkBox, span);
+    $label.className = 'option';
+    $label.className = 'check';
+    $label.for = `${$id}`
+    $label.textContent = `${$value}`;
+
+    let $checkInput = document.createElement('input');
+    $checkInput.className = 'check__input';
+    $checkInput.id = `${$id}`;
+    $checkInput.type = 'checkbox';
+
+    let $checkSpan = document.createElement('span');
+    $checkSpan.className = 'check__box';
+
+    $label.prepend($checkInput, $checkSpan)
 
         $label.addEventListener('click', addCheckedValue);
         function addCheckedValue () {
+            if ($checkInput.checked === 'true') {
+                $label.style.textDecoration = 'none';
+
+            }
+            else {
             $label.style.textDecoration = 'line-through';
-            // $label.style.opacity = '0.5';
+            $label.style.opacity = '0.5';
+            }
         }
 
     let $delCheckBox = document.createElement('div');

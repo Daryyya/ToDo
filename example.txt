@@ -1,0 +1,54 @@
+    <label class="check option">
+        <input class="check__input" type="checkbox">
+        <span class="check__box"></span>
+        First
+    </label>
+    <label class="check option">
+        <input class="check__input" type="checkbox">
+        <span class="check__box"></span>
+        Second
+    </label>
+    <label class="check option">
+        <input class="check__input" type="checkbox">
+        <span class="check__box"></span>
+        Third
+    </label>
+
+.option {
+    display: block;
+    margin-bottom: 0.25em;
+  }
+
+  .check {
+    padding-left: 1.2em;
+  }
+
+  .check__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .check__box {
+    position: absolute;
+    margin-top: 0.2em;
+    margin-left: -1em;
+    width: 0.6em;
+    height: 0.6em;
+    border-radius: 0.05em;
+    background-color: white;
+    box-shadow: 0 0 0 0.1em red;
+  }
+
+  .check__input:checked + .check__box {
+    background-color: red;
+  }
+
+  .check__input:hover + .check__box {
+    box-shadow: 0 0 0 0.1em red, 0 0 0 0.2em blue;
+  }

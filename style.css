@@ -45,6 +45,7 @@
 .wrapCheckBox {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 15px;
 }
 
 .wrapBtn {
@@ -77,7 +78,7 @@
     color: #FFFFFF;
 }
 
-label {
+/* label {
     position: relative;
     padding-bottom: 26px;
     font-weight: 400;
@@ -132,9 +133,9 @@ label {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-  }
+  } */
 
-label::before {
+/* label::before {
     content: '';
     text-align: center;
   color: white;
@@ -145,7 +146,7 @@ label::before {
   border-radius: 0.25em;
   margin: 0.25em;
   display: inline-block;
-}
+} */
 
 .btnDelChecked {
     background: #6C757D;
@@ -168,6 +169,48 @@ label::before {
     text-align: center;
     color: #FFFFFF;
 }
+
+/* CHECKBOX */
+
+.option {
+    display: block;
+    margin-bottom: 1em;
+  }
+
+  .check {
+    padding-left: 1.2em;
+  }
+
+  .check__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .check__box {
+    position: absolute;
+    margin-top: 0.2em;
+    margin-left: -1em;
+    width: 0.6em;
+    height: 0.6em;
+    border-radius: 0.05em;
+    background-color: white;
+    box-shadow: 0 0 0 0.1em #7749F8;
+  }
+
+  .check__input:checked + .check__box {
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 1L3.5 6.5L1 4' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-color: #7749F8;
+  }
+
+  .check__input:hover + .check__box {
+    box-shadow: 0 0 0 0.1em #7749F8, 0 0 0 0.2em blue;
+  }
 
 
 
