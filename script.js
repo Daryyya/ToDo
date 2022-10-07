@@ -47,12 +47,18 @@ function createCheckBox ($value) {
     let $delCheckBox = document.createElement('div');
         $delCheckBox.textContent = '❌';
 
-        $delCheckBox.addEventListener('click', () => {$wrapCheckBox.innerHTML = '';});
+        $delCheckBox.addEventListener('click', () => {$wrapCheckBox.parentNode.removeChild($wrapCheckBox);});
 
         let $wrapCheckBox = document.createElement('div');
         $wrapCheckBox.className = 'wrapCheckBox';
 
-        $btnDelAll.addEventListener('click', () => {$wrapCheckBox.innerHTML = '';});
+        $btnDelAll.addEventListener('click', () => {$wrapCheckBox.parentNode.removeChild($wrapCheckBox);});
+
+        $btnDelChecked.addEventListener('click', () => {
+            if ($checkInput.checked) {
+                $wrapCheckBox.parentNode.removeChild($wrapCheckBox);
+            }
+        })
     
         $wrapCheckBox.prepend($label, $delCheckBox);
 
@@ -60,15 +66,17 @@ function createCheckBox ($value) {
             let obj = {
                 value: `${$value}`,
                 id: `${$id}`,
+                checked: $checkInput.checked,
             }
             return obj;
         }
 
-        arr.push(createObj($value, $id));
+        arr.push(createObj($value, $id, $checkInput.checked));
 
-        console.log(arr);
-
-
+        function fff () {
+            let arr = localStorage.getItem('checkboxes');
+            console.log(arr);
+        }
         return $wrapCheckBox;
         
 }
@@ -76,7 +84,7 @@ $btnAddCheckBox.addEventListener('click', createCheckBoxList);
 
 function createCheckBoxList () {
     if ($input.value) {
-        $wrapper.style.minHeight = '283px';
+        // $wrapper.style.minHeight = '283px';
 
         $id += 'a';
 
@@ -93,7 +101,7 @@ function createCheckBoxList () {
 
     $input.value = '';
 
-    $input.addEventListener('$input', start);
+    $input.addEventListener('input', start);
 
     function start () {
         $input.style.border = '1px solid #CED4DA';

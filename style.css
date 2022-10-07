@@ -108,14 +108,14 @@ form {
 }
 
 .btn {
-    background:  #272829;
-    border-radius: 4px;
-    padding: 10px 60px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    color: #FFFFFF;
+  background:  #272829;
+  border-radius: 4px;
+  padding: 10px 60px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
 }
 
 /* label {
