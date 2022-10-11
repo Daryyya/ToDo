@@ -252,5 +252,9 @@ form {
     box-shadow: 0 0 0 0.1em #7749F8, 0 0 0 0.2em blue;
   }
 
+  .line {
+    text-decoration: line-through;
+  }
+
 
 
