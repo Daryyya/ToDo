@@ -1,5 +1,3 @@
-
-
 * {
     font-family: 'Inter', sans-serif;
 }
@@ -17,32 +15,6 @@ form {
 .inputTest {
     border: 1px solid black;
 }
-
-/* .reg{
-    background:  #272829;
-    border-radius: 4px;
-    padding: 10px 30px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    color: #FFFFFF;
-    
-}
-
-.popup {
-    width: 100%;
-    height: 100%;
-    background-color: hsl(0, 9%, 30%);
-    opacity: 0.5;
-}
-
-.modal {
-    margin: 0px auto;
-    width: 500px;
-    height: 500px;
-    background-color: #FFFFFF;
-} */
 
 .container {
     max-width: 660px;
@@ -117,76 +89,6 @@ form {
   text-align: center;
   color: #FFFFFF;
 }
-
-/* label {
-    position: relative;
-    padding-bottom: 26px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 21px;
-    color: #54595E;
-}
-
-.checkBox {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    margin-right: ;
-  }
-
-  .checkBox ~ .checkmark {
-    background-color: #ccc;
-  }
-
-  .checkBox:checked ~ .checkmark {
-    background-color: #23f438;
-  }
-
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-
-  .checkBox:checked ~ .checkmark:after {
-    display: block;
-  }
-
- .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  } */
-
-/* label::before {
-    content: '';
-    text-align: center;
-  color: white;
-  line-height: 1em;
-  width: 1em;
-  height: 1em;
-  border: 2px inset #000;
-  border-radius: 0.25em;
-  margin: 0.25em;
-  display: inline-block;
-} */
 
 .btnDelChecked {
     background: #6C757D;
